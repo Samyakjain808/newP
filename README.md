@@ -2,7 +2,7 @@
 
 Welcome to my personal 3D portfolio! This interactive, visually immersive website is built to showcase my backend, frontend, and AI engineering skills, alongside cutting-edge creative web development techniques. 
 
-Checkout the live version at: **[Samyakjain808.github.io](https://Samyakjain808.github.io/)**
+Checkout the live version at: **[PortFolio](https://new-p-rho.vercel.app/)**
 
 ## 🚀 The Vision
 
