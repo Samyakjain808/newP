@@ -19,8 +19,8 @@ const ProjectsCarousel = () => {
   };
 
   const tiles = useMemo(() => {
-    const fov = Math.PI;
-    const distance = 13;
+    const fov = Math.PI * 1.04;
+    const distance = 10.5;
     const count = PROJECTS.length;
 
     return PROJECTS.map((project, i) => {
@@ -44,7 +44,7 @@ const ProjectsCarousel = () => {
   }, [activeId, isActive]);
 
   return (
-    <group rotation={[0, -Math.PI / 12, 0]}>
+    <group rotation={[0, -Math.PI / 12, 0]} position={[0, 0, 2.5]}>
       {tiles}
     </group>
   );

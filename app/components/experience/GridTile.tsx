@@ -41,7 +41,7 @@ const GridTile = (props: GridTileProps) => {
         letterSpacing: 0.4,
       });
       gsap.to(titleRef.current.position, {
-        x: isWork ? 1: -1,
+        x: isWork ? 1 : -1,
         y: isWork ? -1.7 : 1.5,
         duration: 0.5,
       });
@@ -79,7 +79,7 @@ const GridTile = (props: GridTileProps) => {
       gsap.fromTo(div, {
         scale: 0,
         rotate: '-180deg',
-      },{
+      }, {
         opacity: 1,
         zIndex: 10,
         transform: 'rotateX(0deg)',
@@ -129,13 +129,14 @@ const GridTile = (props: GridTileProps) => {
 
   const fontProps: Partial<TextProps> = {
     font: "./soria-font.ttf",
-    maxWidth: 2,
+    maxWidth: 2.8,
     anchorX: 'center',
     anchorY: 'bottom',
-    fontSize: 0.7,
+    fontSize: 0.55,
     color: 'white',
     textAlign: textAlign,
     fillOpacity: 0,
+    letterSpacing: 0.1,
   };
 
   const onPointerOver = () => {
@@ -145,7 +146,7 @@ const GridTile = (props: GridTileProps) => {
       fillOpacity: 1
     });
     if (gridRef.current && hoverBoxRef.current) {
-      gsap.to(gridRef.current.position, { z: 0.5, duration: 0.4});
+      gsap.to(gridRef.current.position, { z: 0.5, duration: 0.4 });
       gsap.to(hoverBoxRef.current.scale, { x: 1, y: 1, z: 1, duration: 0.4 });
     }
   };
@@ -157,7 +158,7 @@ const GridTile = (props: GridTileProps) => {
       fillOpacity: 0
     });
     if (gridRef.current && hoverBoxRef.current) {
-      gsap.to(gridRef.current.position, { z: 0, duration: 0.4});
+      gsap.to(gridRef.current.position, { z: 0, duration: 0.4 });
       gsap.to(hoverBoxRef.current.scale, { x: 0, y: 0, z: 0, duration: 0.4 });
     }
   };
@@ -181,16 +182,16 @@ const GridTile = (props: GridTileProps) => {
       onClick={portalInto}
       onPointerOver={onPointerOver}
       onPointerOut={onPointerOut}>
-      { getGeometry() }
+      {getGeometry()}
       <group>
         <mesh position={[0, 0, -0.01]} ref={hoverBoxRef} scale={[0, 0, 0]}>
-          <boxGeometry args={[4, 4, 0.5]}/>
+          <boxGeometry args={[4, 4, 0.5]} />
           <meshPhysicalMaterial
             color="#444"
             transparent={true}
             opacity={0.3}
           />
-          <Edges color="white" lineWidth={3}/>
+          <Edges color="white" lineWidth={3} />
         </mesh>
         <Text position={[0, -1.8, 0.4]} {...fontProps} ref={titleRef}>
           {title}

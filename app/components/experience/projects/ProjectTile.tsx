@@ -43,15 +43,15 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
 
     hoverAnimRef.current = gsap.timeline();
     hoverAnimRef.current
-      .to(projectRef.current.position, { z: hovered ? 1 : 0, duration: 0.2 }, 0)
+      .to(projectRef.current.position, { z: hovered ? 3 : 0, duration: 0.2 }, 0)
       .to(projectRef.current.position, { y: hovered ? 0.4 : 0 }, 0)
       .to(projectRef.current.scale, {
-        x: hovered ? 1.3 : 1,
-        y: hovered ? 1.3 : 1,
-        z: hovered ? 1.3 : 1,
+        x: hovered ? 1.8 : 1,
+        y: hovered ? 1.8 : 1,
+        z: hovered ? 1.8 : 1,
       }, 0)
-      .to(title.position, { y: hovered ? 0.7 : -0.8 }, 0)
-      .to(textBox.position, { y: hovered ? 0.7 : 0 }, 0)
+      .to(title.position, { y: hovered ? 1.4 : -0.8 }, 0)
+      .to(textBox.position, { y: hovered ? 1.4 : 0 }, 0)
       // .to(textBox.scale, { y: hovered ? 1 : 0, x: hovered ? 1 : 0 }, 0)
       .to(textBox, { fillOpacity: hovered ? 1 : 0, duration: 0.4 }, 0)
       .to(dateGroup.position, { y: hovered ? 2.6 : 1.4 }, 0)
@@ -101,7 +101,7 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
       <group ref={projectRef}>
         <mesh>
           <planeGeometry args={[4.2, 2, 1]} />
-          <meshBasicMaterial color="#FFF" transparent opacity={0.3}/>
+          <meshBasicMaterial color="#FFF" transparent opacity={0.3} />
           {/* <meshPhysicalMaterial transmission={1} roughness={0.3} /> */}
           <Edges color="black" lineWidth={1.5} />
         </mesh>
@@ -110,8 +110,9 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
           position={[-1.9, -0.8, 0.101]}
           anchorX="left"
           anchorY="bottom"
-          maxWidth={4}
-          fontSize={0.8}>
+          maxWidth={3.8}
+          lineHeight={1}
+          fontSize={project.title.length > 25 ? 0.4 : (project.title.length > 15 ? 0.5 : 0.7)}>
           {project.title}
         </Text>
         <group position={[-1.25, 1.4, 0.01]}>
