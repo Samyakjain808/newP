@@ -50,4 +50,5 @@ To run this project on your local machine:
 
 ## 📄 License & Rights
 Feel free to gain inspiration from this repository, but please kindly replace the 3D models out of respect for the original art style, modify the typography, and replace the underlying data tracking with your own.
+
  
