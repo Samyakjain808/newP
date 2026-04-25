@@ -13,8 +13,9 @@ const vercettiFont = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://new-p-rho.vercel.app"),
   title: "Samyak Jain ✌️",
-  description: "Building Intelligent Systems with AI and Full-Stack Engineering.",
+  description: "Hi, I am Samyak Jain.",
   keywords: "Samyak Jain, Frontend Engineer, React Developer, Three.js, Creative Developer, Web Development, Angular, JavaScript, TypeScript, Portfolio",
   authors: [{ name: "Samyak Jain" }],
   creator: "Samyak Jain",
@@ -36,25 +37,25 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Samyak Jain - Frontend Engineer",
-    description: "Building Intelligent Systems with AI and Full-Stack Engineering.",
+    description: "Hi, I am Samyak Jain.",
     url: "https://new-p-rho.vercel.app",
     siteName: "Samyak Jain's Portfolio",
-    locale: "en_US",
-    type: "website",
     images: [
       {
-        url: "https://new-p-rho.vercel.app/preview-img.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Samyak Jain Portfolio Preview",
+        alt: "Samyak Jain - Frontend Engineer",
       },
     ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Samyak Jain - Frontend Engineer",
-    description: "Building Intelligent Systems with AI and Full-Stack Engineering.",
-    images: ["https://new-p-rho.vercel.app/preview-img.png"],
+    description: "Hi, I am Samyak Jain.",
+    images: ["/opengraph-image.png"],
   },
 };
 
